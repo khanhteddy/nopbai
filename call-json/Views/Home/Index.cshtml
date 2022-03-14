@@ -1,0 +1,13 @@
+﻿@model OpenWeathermap;
+<div class="text-left">
+    @foreach (var forecast in Model.consolidated_weather)
+    {
+        <div>
+            <h4>@forecast.applicable_date</h4>
+            <div>Min: @forecast.min_temp Cº, Max: @forecast.max_temp Cº</div>
+            <div>@forecast.weather_state_name</div>
+            <img src =" http://openweathermap.org/img/wn/@(forecast.weather_state_abbr).png" style="width:32px"/>
+            <hr/>
+        </div>
+    }
+</div>
